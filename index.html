@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MAISON NOIR</title>
+  <title>MAISON NOIR &mdash; Silence Is Luxury</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- PAGE TRANSITION -->
+  <div id="pageTransition" class="page-transition">
+    <div class="transition-logo">MAISON NOIR</div>
+  </div>
 
   <!-- LOADER -->
   <div id="loader">
@@ -27,18 +32,17 @@
   <!-- NAV -->
   <nav id="nav">
     <div class="nav-left">
-      <a href="#" class="nav-logo">MN</a>
+      <a href="index.html" class="nav-logo">MN</a>
     </div>
     <div class="nav-center">
-      <a href="#" class="nav-link" data-hover="Archive">Archive</a>
-      <a href="#" class="nav-link" data-hover="Collection">Collection</a>
-      <a href="#" class="nav-link" data-hover="World">World</a>
+      <a href="collections.html" class="nav-link page-link" data-hover="Collections">Collections</a>
+      <a href="lookbook.html" class="nav-link page-link" data-hover="Lookbook">Lookbook</a>
+      <a href="journal.html" class="nav-link page-link" data-hover="Journal">Journal</a>
+      <a href="about.html" class="nav-link page-link" data-hover="About">About</a>
     </div>
     <div class="nav-right">
-      <button class="nav-menu-btn" id="menuBtn">
-        <span></span>
-        <span></span>
-      </button>
+      <a href="contact.html" class="nav-link page-link nav-contact" data-hover="Contact">Contact</a>
+      <button class="nav-menu-btn" id="menuBtn"><span></span><span></span></button>
     </div>
   </nav>
 
@@ -47,23 +51,25 @@
     <div class="menu-grid">
       <div class="menu-col">
         <span class="menu-label">Navigate</span>
-        <a href="#hero" class="menu-link">Home</a>
-        <a href="#collection" class="menu-link">Collection</a>
-        <a href="#editorial" class="menu-link">Editorial</a>
-        <a href="#about" class="menu-link">About</a>
+        <a href="index.html" class="menu-link">Home</a>
+        <a href="collections.html" class="menu-link page-link">Collections</a>
+        <a href="lookbook.html" class="menu-link page-link">Lookbook</a>
+        <a href="journal.html" class="menu-link page-link">Journal</a>
+        <a href="about.html" class="menu-link page-link">About</a>
       </div>
       <div class="menu-col">
         <span class="menu-label">Connect</span>
+        <a href="contact.html" class="menu-link page-link">Contact</a>
         <a href="#" class="menu-link">Instagram</a>
-        <a href="#" class="menu-link">Journal</a>
-        <a href="#" class="menu-link">Contact</a>
+        <a href="#" class="menu-link">Pinterest</a>
+        <a href="#" class="menu-link">Press</a>
       </div>
       <div class="menu-col menu-featured">
         <span class="menu-label">Latest</span>
         <div class="menu-featured-img">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80" alt="Featured">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80" alt="Featured" loading="lazy">
         </div>
-        <span class="menu-caption">SS26 Campaign</span>
+        <span class="menu-caption">SS26 Campaign &rarr;</span>
       </div>
     </div>
   </div>
@@ -75,187 +81,128 @@
       <div class="hero-grain"></div>
     </div>
     <div class="hero-content">
-      <div class="hero-eyebrow">
-        <span class="line-reveal">Spring / Summer 2026</span>
-      </div>
+      <div class="hero-eyebrow"><span class="line-reveal">Spring / Summer 2026</span></div>
       <h1 class="hero-title">
         <span class="title-line"><span class="line-reveal">Silence</span></span>
         <span class="title-line title-indent"><span class="line-reveal">Is</span></span>
         <span class="title-line"><span class="line-reveal">Luxury</span></span>
       </h1>
       <div class="hero-cta">
-        <a href="#collection" class="btn-reveal">
+        <a href="collections.html" class="btn-reveal page-link">
           <span class="btn-text">Enter the Collection</span>
           <span class="btn-arrow">&rarr;</span>
         </a>
       </div>
     </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
+    <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
   </section>
 
   <!-- MARQUEE -->
   <section class="marquee-section">
     <div class="marquee-track">
-      <span>MAISON NOIR</span>
-      <span>&mdash;</span>
-      <span>EST. 2024</span>
-      <span>&mdash;</span>
-      <span>PARIS</span>
-      <span>&mdash;</span>
-      <span>TOKYO</span>
-      <span>&mdash;</span>
-      <span>NEW YORK</span>
-      <span>&mdash;</span>
-      <span>MAISON NOIR</span>
-      <span>&mdash;</span>
-      <span>EST. 2024</span>
-      <span>&mdash;</span>
-      <span>PARIS</span>
-      <span>&mdash;</span>
-      <span>TOKYO</span>
-      <span>&mdash;</span>
-      <span>NEW YORK</span>
-      <span>&mdash;</span>
+      <span>MAISON NOIR</span><span>&mdash;</span><span>EST. 2024</span><span>&mdash;</span><span>PARIS</span><span>&mdash;</span><span>TOKYO</span><span>&mdash;</span><span>NEW YORK</span><span>&mdash;</span>
+      <span>MAISON NOIR</span><span>&mdash;</span><span>EST. 2024</span><span>&mdash;</span><span>PARIS</span><span>&mdash;</span><span>TOKYO</span><span>&mdash;</span><span>NEW YORK</span><span>&mdash;</span>
     </div>
   </section>
 
   <!-- PHILOSOPHY -->
-  <section id="about" class="philosophy">
+  <section id="philosophy" class="philosophy">
     <div class="philosophy-grid">
       <div class="philosophy-left">
         <span class="section-tag">001 / Philosophy</span>
         <h2 class="philosophy-title scroll-reveal">We don't<br>follow<br>seasons.</h2>
       </div>
       <div class="philosophy-right">
-        <p class="philosophy-text scroll-reveal">Maison Noir exists outside the fashion calendar. No drops. No hype cycles. Each piece is developed until it's inevitable -- then released without announcement. If you know, you know.</p>
+        <p class="philosophy-text scroll-reveal">Maison Noir exists outside the fashion calendar. No drops. No hype cycles. Each piece is developed until it's inevitable &mdash; then released without announcement. If you know, you know.</p>
         <p class="philosophy-text scroll-reveal">We build for people who dress for themselves. Not for the algorithm. Not for the crowd. For the mirror.</p>
         <div class="philosophy-stats scroll-reveal">
-          <div class="stat">
-            <span class="stat-num">12</span>
-            <span class="stat-label">Pieces per year</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">1</span>
-            <span class="stat-label">Standard</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">0</span>
-            <span class="stat-label">Compromises</span>
-          </div>
+          <div class="stat"><span class="stat-num">12</span><span class="stat-label">Pieces per year</span></div>
+          <div class="stat"><span class="stat-num">1</span><span class="stat-label">Standard</span></div>
+          <div class="stat"><span class="stat-num">0</span><span class="stat-label">Compromises</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- COLLECTION -->
+  <!-- COLLECTION PREVIEW -->
   <section id="collection" class="collection">
     <div class="collection-header">
       <span class="section-tag">002 / Collection</span>
       <h2 class="collection-title scroll-reveal">Current Archive</h2>
+      <a href="collections.html" class="collection-view-all page-link scroll-reveal">View All Pieces &rarr;</a>
     </div>
     <div class="collection-grid">
       <div class="collection-item" data-speed="0.9">
-        <div class="item-img-wrap">
-          <img src="https://images.unsplash.com/photo-1592878904946-b3cd8ae243d0?w=800&q=80" alt="Structured Coat">
-          <div class="item-overlay">
-            <span>View Piece</span>
+        <a href="product.html?piece=architect-coat" class="page-link">
+          <div class="item-img-wrap">
+            <img src="https://images.unsplash.com/photo-1592878904946-b3cd8ae243d0?w=800&q=80" alt="The Architect Coat" loading="lazy">
+            <div class="item-overlay"><span>View Piece</span></div>
           </div>
-        </div>
-        <div class="item-info">
-          <span class="item-name">The Architect Coat</span>
-          <span class="item-price">&euro;2,400</span>
-        </div>
+          <div class="item-info"><span class="item-name">The Architect Coat</span><span class="item-price">&euro;2,400</span></div>
+        </a>
       </div>
       <div class="collection-item" data-speed="1.1">
-        <div class="item-img-wrap">
-          <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80" alt="Silk Layer">
-          <div class="item-overlay">
-            <span>View Piece</span>
+        <a href="product.html?piece=raw-silk-drape" class="page-link">
+          <div class="item-img-wrap">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80" alt="Raw Silk Drape" loading="lazy">
+            <div class="item-overlay"><span>View Piece</span></div>
           </div>
-        </div>
-        <div class="item-info">
-          <span class="item-name">Raw Silk Drape</span>
-          <span class="item-price">&euro;1,100</span>
-        </div>
+          <div class="item-info"><span class="item-name">Raw Silk Drape</span><span class="item-price">&euro;1,100</span></div>
+        </a>
       </div>
       <div class="collection-item" data-speed="0.95">
-        <div class="item-img-wrap">
-          <img src="https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=800&q=80" alt="Noir Blazer">
-          <div class="item-overlay">
-            <span>View Piece</span>
+        <a href="product.html?piece=deconstructed-blazer" class="page-link">
+          <div class="item-img-wrap">
+            <img src="https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=800&q=80" alt="Deconstructed Blazer" loading="lazy">
+            <div class="item-overlay"><span>View Piece</span></div>
           </div>
-        </div>
-        <div class="item-info">
-          <span class="item-name">Deconstructed Blazer</span>
-          <span class="item-price">&euro;1,800</span>
-        </div>
+          <div class="item-info"><span class="item-name">Deconstructed Blazer</span><span class="item-price">&euro;1,800</span></div>
+        </a>
       </div>
       <div class="collection-item" data-speed="1.05">
-        <div class="item-img-wrap">
-          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80" alt="Column Dress">
-          <div class="item-overlay">
-            <span>View Piece</span>
+        <a href="product.html?piece=column-dress" class="page-link">
+          <div class="item-img-wrap">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80" alt="Column Dress" loading="lazy">
+            <div class="item-overlay"><span>View Piece</span></div>
           </div>
-        </div>
-        <div class="item-info">
-          <span class="item-name">Column Dress</span>
-          <span class="item-price">&euro;2,100</span>
-        </div>
-      </div>
-      <div class="collection-item" data-speed="0.92">
-        <div class="item-img-wrap">
-          <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&q=80" alt="Layered Look">
-          <div class="item-overlay">
-            <span>View Piece</span>
-          </div>
-        </div>
-        <div class="item-info">
-          <span class="item-name">Shadow Trousers</span>
-          <span class="item-price">&euro;890</span>
-        </div>
-      </div>
-      <div class="collection-item" data-speed="1.08">
-        <div class="item-img-wrap">
-          <img src="https://images.unsplash.com/photo-1544441893-675973e31985?w=800&q=80" alt="Knit">
-          <div class="item-overlay">
-            <span>View Piece</span>
-          </div>
-        </div>
-        <div class="item-info">
-          <span class="item-name">Void Knit</span>
-          <span class="item-price">&euro;760</span>
-        </div>
+          <div class="item-info"><span class="item-name">Column Dress</span><span class="item-price">&euro;2,100</span></div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- EDITORIAL SPLIT -->
+  <!-- EDITORIAL -->
   <section id="editorial" class="editorial">
-    <div class="editorial-header">
-      <span class="section-tag">003 / Editorial</span>
-    </div>
+    <div class="editorial-header"><span class="section-tag">003 / Editorial</span></div>
     <div class="editorial-split">
       <div class="editorial-left">
         <div class="editorial-img-wrap scroll-reveal">
-          <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=900&q=80" alt="Editorial 1">
+          <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=900&q=80" alt="Editorial" loading="lazy">
         </div>
       </div>
       <div class="editorial-right">
         <div class="editorial-text-block">
           <h3 class="editorial-heading scroll-reveal">"Fashion is armor<br>for the everyday war."</h3>
-          <p class="editorial-body scroll-reveal">Shot on location in abandoned brutalist architecture across Eastern Europe. The SS26 editorial strips fashion back to its core tension -- the body versus the structure that contains it.</p>
-          <a href="#" class="editorial-link scroll-reveal">Read the full story &rarr;</a>
+          <p class="editorial-body scroll-reveal">Shot on location in abandoned brutalist architecture across Eastern Europe. The SS26 editorial strips fashion back to its core tension &mdash; the body versus the structure that contains it.</p>
+          <a href="lookbook.html" class="editorial-link scroll-reveal page-link">View the full lookbook &rarr;</a>
         </div>
       </div>
     </div>
     <div class="editorial-wide scroll-reveal">
-      <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=1400&q=80" alt="Editorial Wide">
+      <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=1400&q=80" alt="Editorial Wide" loading="lazy">
       <div class="editorial-wide-caption">
-        <span>The Architect Coat / Deconstructed Blazer</span>
-        <span>Editorial SS26</span>
+        <span>The Architect Coat / Deconstructed Blazer</span><span>Editorial SS26</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESS BAR -->
+  <section class="press-bar">
+    <div class="press-bar-inner">
+      <span class="press-label">As featured in</span>
+      <div class="press-logos">
+        <span class="press-logo">VOGUE</span><span class="press-logo">HYPEBEAST</span><span class="press-logo">SSENSE</span>
+        <span class="press-logo">DAZED</span><span class="press-logo">032c</span><span class="press-logo">HIGHSNOBIETY</span>
       </div>
     </div>
   </section>
@@ -267,44 +214,64 @@
       <h2 class="process-title scroll-reveal">Built, not manufactured.</h2>
     </div>
     <div class="process-steps">
-      <div class="process-step scroll-reveal">
-        <span class="step-num">01</span>
-        <div class="step-content">
-          <h4>Source</h4>
-          <p>Dead-stock fabrics and single-origin mills. We never produce new textiles when existing ones will do.</p>
-        </div>
-      </div>
-      <div class="process-step scroll-reveal">
-        <span class="step-num">02</span>
-        <div class="step-content">
-          <h4>Pattern</h4>
-          <p>Each pattern is draped on the form, not drafted on screen. The fabric decides the silhouette.</p>
-        </div>
-      </div>
-      <div class="process-step scroll-reveal">
-        <span class="step-num">03</span>
-        <div class="step-content">
-          <h4>Construct</h4>
-          <p>Hand-finished in a single atelier. One maker sees each piece from cut to final press.</p>
-        </div>
-      </div>
-      <div class="process-step scroll-reveal">
-        <span class="step-num">04</span>
-        <div class="step-content">
-          <h4>Release</h4>
-          <p>No pre-orders. No waitlists. When it's ready, it appears. First come, only come.</p>
-        </div>
-      </div>
+      <div class="process-step scroll-reveal"><span class="step-num">01</span><div class="step-content"><h4>Source</h4><p>Dead-stock fabrics and single-origin mills. We never produce new textiles when existing ones will do.</p></div></div>
+      <div class="process-step scroll-reveal"><span class="step-num">02</span><div class="step-content"><h4>Pattern</h4><p>Each pattern is draped on the form, not drafted on screen. The fabric decides the silhouette.</p></div></div>
+      <div class="process-step scroll-reveal"><span class="step-num">03</span><div class="step-content"><h4>Construct</h4><p>Hand-finished in a single atelier. One maker sees each piece from cut to final press.</p></div></div>
+      <div class="process-step scroll-reveal"><span class="step-num">04</span><div class="step-content"><h4>Release</h4><p>No pre-orders. No waitlists. When it's ready, it appears. First come, only come.</p></div></div>
+    </div>
+    <div class="process-cta scroll-reveal">
+      <a href="about.html" class="btn-outline page-link">Learn more about our craft &rarr;</a>
     </div>
   </section>
 
-  <!-- NEWSLETTER / CONTACT -->
-  <section class="contact">
+  <!-- JOURNAL PREVIEW -->
+  <section class="journal-preview">
+    <div class="journal-preview-header">
+      <span class="section-tag">005 / Journal</span>
+      <h2 class="journal-preview-title scroll-reveal">From the Atelier</h2>
+      <a href="journal.html" class="collection-view-all page-link scroll-reveal">Read All &rarr;</a>
+    </div>
+    <div class="journal-preview-grid">
+      <article class="journal-card scroll-reveal">
+        <a href="journal.html" class="page-link">
+          <div class="journal-card-img"><img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=600&q=80" alt="Journal" loading="lazy"></div>
+          <div class="journal-card-content">
+            <span class="journal-card-date">March 2026</span>
+            <h3 class="journal-card-title">The Architecture of Absence</h3>
+            <p class="journal-card-excerpt">On why removing elements creates more powerful garments than adding them.</p>
+          </div>
+        </a>
+      </article>
+      <article class="journal-card scroll-reveal">
+        <a href="journal.html" class="page-link">
+          <div class="journal-card-img"><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&q=80" alt="Journal" loading="lazy"></div>
+          <div class="journal-card-content">
+            <span class="journal-card-date">February 2026</span>
+            <h3 class="journal-card-title">Dead Stock Diaries: Milan</h3>
+            <p class="journal-card-excerpt">Inside the warehouses where we source fabrics that were never meant to be found.</p>
+          </div>
+        </a>
+      </article>
+      <article class="journal-card scroll-reveal">
+        <a href="journal.html" class="page-link">
+          <div class="journal-card-img"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80" alt="Journal" loading="lazy"></div>
+          <div class="journal-card-content">
+            <span class="journal-card-date">January 2026</span>
+            <h3 class="journal-card-title">Why We Don't Do Fashion Week</h3>
+            <p class="journal-card-excerpt">The runway is a performance. We prefer the quiet conviction of a well-made thing.</p>
+          </div>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="contact-section">
     <div class="contact-inner">
       <h2 class="contact-title scroll-reveal">Stay in the dark.</h2>
       <p class="contact-sub scroll-reveal">Private list. No spam. First access to new pieces.</p>
       <form class="contact-form scroll-reveal">
-        <input type="email" placeholder="your@email.com" class="contact-input">
+        <input type="email" placeholder="your@email.com" class="contact-input" required>
         <button type="submit" class="contact-btn">Join</button>
       </form>
     </div>
@@ -313,28 +280,28 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-grid">
+      <div class="footer-col"><span class="footer-logo">MAISON NOIR</span><p class="footer-tagline">Silence is luxury.</p></div>
       <div class="footer-col">
-        <span class="footer-logo">MAISON NOIR</span>
-        <p class="footer-tagline">Silence is luxury.</p>
+        <span class="footer-label">Explore</span>
+        <a href="collections.html" class="page-link">Collections</a>
+        <a href="lookbook.html" class="page-link">Lookbook</a>
+        <a href="journal.html" class="page-link">Journal</a>
+        <a href="about.html" class="page-link">About</a>
       </div>
       <div class="footer-col">
-        <span class="footer-label">Location</span>
-        <p>13 Rue de Braque<br>Paris, 75003</p>
-      </div>
-      <div class="footer-col">
-        <span class="footer-label">Social</span>
+        <span class="footer-label">Connect</span>
+        <a href="contact.html" class="page-link">Contact</a>
         <a href="#">Instagram</a>
         <a href="#">Pinterest</a>
       </div>
       <div class="footer-col">
-        <span class="footer-label">Legal</span>
-        <a href="#">Privacy</a>
+        <span class="footer-label">Details</span>
+        <p>13 Rue de Braque<br>Paris, 75003</p>
+        <a href="#">Privacy Policy</a>
         <a href="#">Terms</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 Maison Noir. All rights reserved.</span>
-    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Maison Noir. All rights reserved.</span></div>
   </footer>
 
   <script src="js/main.js"></script>
