@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &mdash; MAISON NOIR</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="page-contact">
+
+  <div id="pageTransition" class="page-transition"><div class="transition-logo">MAISON NOIR</div></div>
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-left"><a href="index.html" class="nav-logo page-link">MN</a></div>
+    <div class="nav-center">
+      <a href="collections.html" class="nav-link page-link" data-hover="Collections">Collections</a>
+      <a href="lookbook.html" class="nav-link page-link" data-hover="Lookbook">Lookbook</a>
+      <a href="journal.html" class="nav-link page-link" data-hover="Journal">Journal</a>
+      <a href="about.html" class="nav-link page-link" data-hover="About">About</a>
+    </div>
+    <div class="nav-right">
+      <a href="contact.html" class="nav-link active nav-contact" data-hover="Contact">Contact</a>
+      <button class="nav-menu-btn" id="menuBtn"><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- FULLSCREEN MENU -->
+  <div id="fullMenu" class="full-menu">
+    <div class="menu-grid">
+      <div class="menu-col">
+        <span class="menu-label">Navigate</span>
+        <a href="index.html" class="menu-link page-link">Home</a>
+        <a href="collections.html" class="menu-link page-link">Collections</a>
+        <a href="lookbook.html" class="menu-link page-link">Lookbook</a>
+        <a href="journal.html" class="menu-link page-link">Journal</a>
+        <a href="about.html" class="menu-link page-link">About</a>
+      </div>
+      <div class="menu-col">
+        <span class="menu-label">Connect</span>
+        <a href="contact.html" class="menu-link">Contact</a>
+        <a href="#" class="menu-link">Instagram</a>
+        <a href="#" class="menu-link">Pinterest</a>
+      </div>
+      <div class="menu-col menu-featured">
+        <span class="menu-label">Latest</span>
+        <div class="menu-featured-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80" alt="Featured" loading="lazy"></div>
+        <span class="menu-caption">SS26 Campaign &rarr;</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT HERO -->
+  <header class="contact-hero">
+    <div class="contact-hero-inner">
+      <span class="page-header-tag">Get in Touch</span>
+      <h1 class="contact-hero-title">We'd rather<br>talk in person.</h1>
+      <p class="contact-hero-sub">But this works too.</p>
+    </div>
+  </header>
+
+  <!-- CONTACT GRID -->
+  <section class="contact-main">
+    <div class="contact-main-grid">
+
+      <!-- CONTACT FORM -->
+      <div class="contact-form-section">
+        <h2 class="contact-form-title scroll-reveal">Send a Message</h2>
+        <form class="contact-page-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group scroll-reveal">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required placeholder="Your first name">
+            </div>
+            <div class="form-group scroll-reveal">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required placeholder="Your last name">
+            </div>
+          </div>
+          <div class="form-group scroll-reveal">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
+          </div>
+          <div class="form-group scroll-reveal">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>Select a topic</option>
+              <option value="general">General Inquiry</option>
+              <option value="order">Order &amp; Shipping</option>
+              <option value="press">Press &amp; Media</option>
+              <option value="wholesale">Stockist &amp; Wholesale</option>
+              <option value="atelier">Atelier Visit</option>
+              <option value="custom">Custom &amp; Bespoke</option>
+            </select>
+          </div>
+          <div class="form-group scroll-reveal">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Tell us what you're looking for..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary scroll-reveal" id="contactSubmit">
+            <span>Send Message</span>
+            <span class="btn-arrow">&rarr;</span>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <span>Message sent. We'll respond within 48 hours.</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- CONTACT INFO SIDEBAR -->
+      <div class="contact-info-section">
+        <div class="contact-info-block scroll-reveal">
+          <h3>Paris Atelier</h3>
+          <p>13 Rue de Braque<br>75003 Paris, France</p>
+          <p class="contact-hours">By appointment only<br>Tuesday &ndash; Saturday, 10h &ndash; 18h</p>
+          <a href="mailto:atelier@maisonnoir.com" class="contact-email">atelier@maisonnoir.com</a>
+        </div>
+
+        <div class="contact-info-block scroll-reveal">
+          <h3>Tokyo Showroom</h3>
+          <p>4-12-8 Jingumae<br>Shibuya, Tokyo 150-0001</p>
+          <p class="contact-hours">By appointment only<br>Wednesday &ndash; Sunday, 11h &ndash; 19h</p>
+          <a href="mailto:tokyo@maisonnoir.com" class="contact-email">tokyo@maisonnoir.com</a>
+        </div>
+
+        <div class="contact-info-block scroll-reveal">
+          <h3>New York Private Viewing</h3>
+          <p>87 Franklin Street<br>New York, NY 10013</p>
+          <p class="contact-hours">By appointment only<br>Thursday &ndash; Saturday, 11h &ndash; 18h</p>
+          <a href="mailto:ny@maisonnoir.com" class="contact-email">ny@maisonnoir.com</a>
+        </div>
+
+        <div class="contact-info-block scroll-reveal">
+          <h3>Press &amp; Media</h3>
+          <p>For press inquiries, sample requests, and editorial collaborations.</p>
+          <a href="mailto:press@maisonnoir.com" class="contact-email">press@maisonnoir.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP PLACEHOLDER -->
+  <section class="contact-map">
+    <div class="contact-map-inner">
+      <div class="map-placeholder">
+        <div class="map-placeholder-content">
+          <span class="map-pin">&#9679;</span>
+          <span class="map-label">13 Rue de Braque, Paris 75003</span>
+          <a href="https://maps.google.com/?q=13+Rue+de+Braque+Paris" target="_blank" rel="noopener" class="map-link">Open in Google Maps &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STOCKISTS -->
+  <section class="contact-stockists">
+    <div class="contact-stockists-inner">
+      <span class="section-tag">Stockists</span>
+      <h2 class="contact-stockists-title scroll-reveal">Where to find us.</h2>
+      <p class="contact-stockists-note scroll-reveal">We don't do wholesale. These are the only places outside our ateliers where Maison Noir pieces live.</p>
+      <div class="stockists-grid">
+        <div class="stockist-item scroll-reveal">
+          <h4>Dover Street Market</h4>
+          <p>London &bull; Tokyo &bull; New York</p>
+        </div>
+        <div class="stockist-item scroll-reveal">
+          <h4>SSENSE</h4>
+          <p>Online &bull; Montreal</p>
+        </div>
+        <div class="stockist-item scroll-reveal">
+          <h4>Machine-A</h4>
+          <p>London</p>
+        </div>
+        <div class="stockist-item scroll-reveal">
+          <h4>Maxfield</h4>
+          <p>Los Angeles</p>
+        </div>
+        <div class="stockist-item scroll-reveal">
+          <h4>L'Eclaireur</h4>
+          <p>Paris</p>
+        </div>
+        <div class="stockist-item scroll-reveal">
+          <h4>GR8</h4>
+          <p>Tokyo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col"><span class="footer-logo">MAISON NOIR</span><p class="footer-tagline">Silence is luxury.</p></div>
+      <div class="footer-col">
+        <span class="footer-label">Explore</span>
+        <a href="collections.html" class="page-link">Collections</a>
+        <a href="lookbook.html" class="page-link">Lookbook</a>
+        <a href="journal.html" class="page-link">Journal</a>
+        <a href="about.html" class="page-link">About</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">Connect</span>
+        <a href="contact.html">Contact</a>
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">Details</span>
+        <p>13 Rue de Braque<br>Paris, 75003</p>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Maison Noir. All rights reserved.</span></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

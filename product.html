@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Architect Coat &mdash; MAISON NOIR</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="page-product">
+
+  <div id="pageTransition" class="page-transition"><div class="transition-logo">MAISON NOIR</div></div>
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-left"><a href="index.html" class="nav-logo page-link">MN</a></div>
+    <div class="nav-center">
+      <a href="collections.html" class="nav-link page-link" data-hover="Collections">Collections</a>
+      <a href="lookbook.html" class="nav-link page-link" data-hover="Lookbook">Lookbook</a>
+      <a href="journal.html" class="nav-link page-link" data-hover="Journal">Journal</a>
+      <a href="about.html" class="nav-link page-link" data-hover="About">About</a>
+    </div>
+    <div class="nav-right">
+      <a href="contact.html" class="nav-link page-link nav-contact" data-hover="Contact">Contact</a>
+      <button class="nav-menu-btn" id="menuBtn"><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- FULLSCREEN MENU -->
+  <div id="fullMenu" class="full-menu">
+    <div class="menu-grid">
+      <div class="menu-col">
+        <span class="menu-label">Navigate</span>
+        <a href="index.html" class="menu-link page-link">Home</a>
+        <a href="collections.html" class="menu-link page-link">Collections</a>
+        <a href="lookbook.html" class="menu-link page-link">Lookbook</a>
+        <a href="journal.html" class="menu-link page-link">Journal</a>
+        <a href="about.html" class="menu-link page-link">About</a>
+      </div>
+      <div class="menu-col">
+        <span class="menu-label">Connect</span>
+        <a href="contact.html" class="menu-link page-link">Contact</a>
+        <a href="#" class="menu-link">Instagram</a>
+        <a href="#" class="menu-link">Pinterest</a>
+      </div>
+      <div class="menu-col menu-featured">
+        <span class="menu-label">Latest</span>
+        <div class="menu-featured-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80" alt="Featured" loading="lazy"></div>
+        <span class="menu-caption">SS26 Campaign &rarr;</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="index.html" class="page-link">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="collections.html" class="page-link">Collections</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current" id="breadcrumbName">The Architect Coat</span>
+  </div>
+
+  <!-- PRODUCT DETAIL -->
+  <section class="product-detail">
+    <div class="product-detail-grid">
+
+      <!-- IMAGE GALLERY -->
+      <div class="product-gallery">
+        <div class="product-gallery-main">
+          <div class="product-gallery-slides" id="gallerySlides">
+            <div class="gallery-slide active">
+              <img src="https://images.unsplash.com/photo-1592878904946-b3cd8ae243d0?w=1200&q=85" alt="The Architect Coat - Front" id="mainImage">
+            </div>
+            <div class="gallery-slide">
+              <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=1200&q=85" alt="The Architect Coat - Detail">
+            </div>
+            <div class="gallery-slide">
+              <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1200&q=85" alt="The Architect Coat - Styled">
+            </div>
+            <div class="gallery-slide">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&q=85" alt="The Architect Coat - Back">
+            </div>
+          </div>
+          <button class="gallery-nav gallery-prev">&larr;</button>
+          <button class="gallery-nav gallery-next">&rarr;</button>
+          <div class="gallery-counter"><span id="slideNum">01</span> / <span id="slideTotal">04</span></div>
+        </div>
+        <div class="product-gallery-thumbs" id="galleryThumbs">
+          <button class="thumb active" data-index="0">
+            <img src="https://images.unsplash.com/photo-1592878904946-b3cd8ae243d0?w=200&q=80" alt="Thumb 1">
+          </button>
+          <button class="thumb" data-index="1">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&q=80" alt="Thumb 2">
+          </button>
+          <button class="thumb" data-index="2">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=200&q=80" alt="Thumb 3">
+          </button>
+          <button class="thumb" data-index="3">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=200&q=80" alt="Thumb 4">
+          </button>
+        </div>
+      </div>
+
+      <!-- PRODUCT INFO -->
+      <div class="product-info">
+        <div class="product-info-inner">
+          <span class="product-info-category">Outerwear / SS26</span>
+          <h1 class="product-info-name" id="productName">The Architect Coat</h1>
+          <span class="product-info-price" id="productPrice">&euro;2,400</span>
+          <p class="product-info-desc">A structured overcoat built on the tension between rigid form and fluid movement. Cut from a single bolt of Italian double-faced wool, each coat is hand-finished over 40 hours in our Paris atelier. The oversized silhouette falls to mid-calf, with raw-edge seams that will soften and fray uniquely with wear.</p>
+
+          <!-- SIZE SELECTOR -->
+          <div class="product-sizes">
+            <div class="product-sizes-header">
+              <span class="size-label">Size</span>
+              <a href="#" class="size-guide-link" id="sizeGuideLink">Size Guide</a>
+            </div>
+            <div class="size-options">
+              <button class="size-btn" data-size="XS">XS</button>
+              <button class="size-btn" data-size="S">S</button>
+              <button class="size-btn active" data-size="M">M</button>
+              <button class="size-btn" data-size="L">L</button>
+              <button class="size-btn" data-size="XL">XL</button>
+            </div>
+          </div>
+
+          <!-- ADD TO BAG -->
+          <button class="btn-primary btn-add-to-bag" id="addToBag">
+            <span>Add to Bag</span>
+            <span class="btn-arrow">&rarr;</span>
+          </button>
+
+          <!-- ACCORDION DETAILS -->
+          <div class="product-accordions">
+            <div class="accordion">
+              <button class="accordion-header">
+                <span>Materials &amp; Composition</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-body">
+                <ul>
+                  <li>100% Italian double-faced virgin wool</li>
+                  <li>Silk lining (100% mulberry silk)</li>
+                  <li>Horn buttons, hand-polished</li>
+                  <li>Weight: 1,200g</li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-header">
+                <span>Care Instructions</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-body">
+                <ul>
+                  <li>Dry clean only</li>
+                  <li>Store on wide-shouldered hanger</li>
+                  <li>Avoid prolonged direct sunlight</li>
+                  <li>Natural fibers will develop character over time</li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-header">
+                <span>Shipping &amp; Returns</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-body">
+                <ul>
+                  <li>Complimentary worldwide shipping</li>
+                  <li>Made to order: 2-3 weeks production</li>
+                  <li>14-day return policy (unworn, original packaging)</li>
+                  <li>Each piece ships in a custom garment bag</li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-header">
+                <span>Provenance</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Each Architect Coat is individually numbered and accompanied by a certificate of authenticity. The fabric is sourced from a single-estate mill in Biella, Italy, operational since 1897. Our atelier in the 3rd arrondissement of Paris handles every step from pattern cutting to final pressing.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PIECE NUMBER -->
+          <div class="product-edition">
+            <span class="edition-label">Edition</span>
+            <span class="edition-value">No. 047 / 100</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE LIGHTBOX -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close">&times;</button>
+      <button class="lightbox-nav lightbox-prev">&larr;</button>
+      <img id="lightboxImg" src="" alt="Lightbox">
+      <button class="lightbox-nav lightbox-next">&rarr;</button>
+      <div class="lightbox-counter"><span id="lbNum">01</span> / <span id="lbTotal">04</span></div>
+    </div>
+  </div>
+
+  <!-- SIZE GUIDE MODAL -->
+  <div id="sizeGuideModal" class="size-guide-modal">
+    <div class="size-guide-overlay"></div>
+    <div class="size-guide-content">
+      <button class="size-guide-close">&times;</button>
+      <h3>Size Guide</h3>
+      <p class="size-guide-note">All measurements in centimeters. This piece runs oversized by design.</p>
+      <table class="size-guide-table">
+        <thead>
+          <tr><th>Size</th><th>Chest</th><th>Shoulder</th><th>Length</th><th>Sleeve</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>XS</td><td>104</td><td>44</td><td>112</td><td>62</td></tr>
+          <tr><td>S</td><td>108</td><td>46</td><td>114</td><td>63</td></tr>
+          <tr><td>M</td><td>112</td><td>48</td><td>116</td><td>64</td></tr>
+          <tr><td>L</td><td>116</td><td>50</td><td>118</td><td>65</td></tr>
+          <tr><td>XL</td><td>120</td><td>52</td><td>120</td><td>66</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- RELATED PIECES -->
+  <section class="related-pieces">
+    <div class="related-header">
+      <span class="section-tag">You may also like</span>
+      <h2 class="related-title scroll-reveal">Complete the Look</h2>
+    </div>
+    <div class="related-grid">
+      <div class="collection-item scroll-reveal">
+        <a href="product.html?piece=deconstructed-blazer" class="page-link">
+          <div class="item-img-wrap">
+            <img src="https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=800&q=80" alt="Deconstructed Blazer" loading="lazy">
+            <div class="item-overlay"><span>View Piece</span></div>
+          </div>
+          <div class="item-info"><span class="item-name">Deconstructed Blazer</span><span class="item-price">&euro;1,800</span></div>
+        </a>
+      </div>
+      <div class="collection-item scroll-reveal">
+        <a href="product.html?piece=shadow-trousers" class="page-link">
+          <div class="item-img-wrap">
+            <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&q=80" alt="Shadow Trousers" loading="lazy">
+            <div class="item-overlay"><span>View Piece</span></div>
+          </div>
+          <div class="item-info"><span class="item-name">Shadow Trousers</span><span class="item-price">&euro;890</span></div>
+        </a>
+      </div>
+      <div class="collection-item scroll-reveal">
+        <a href="product.html?piece=void-knit" class="page-link">
+          <div class="item-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544441893-675973e31985?w=800&q=80" alt="Void Knit" loading="lazy">
+            <div class="item-overlay"><span>View Piece</span></div>
+          </div>
+          <div class="item-info"><span class="item-name">Void Knit</span><span class="item-price">&euro;760</span></div>
+        </a>
+      </div>
+      <div class="collection-item scroll-reveal">
+        <a href="product.html?piece=obsidian-turtleneck" class="page-link">
+          <div class="item-img-wrap">
+            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cda3b00?w=800&q=80" alt="Obsidian Turtleneck" loading="lazy">
+            <div class="item-overlay"><span>View Piece</span></div>
+          </div>
+          <div class="item-info"><span class="item-name">Obsidian Turtleneck</span><span class="item-price">&euro;680</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col"><span class="footer-logo">MAISON NOIR</span><p class="footer-tagline">Silence is luxury.</p></div>
+      <div class="footer-col">
+        <span class="footer-label">Explore</span>
+        <a href="collections.html" class="page-link">Collections</a>
+        <a href="lookbook.html" class="page-link">Lookbook</a>
+        <a href="journal.html" class="page-link">Journal</a>
+        <a href="about.html" class="page-link">About</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">Connect</span>
+        <a href="contact.html" class="page-link">Contact</a>
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">Details</span>
+        <p>13 Rue de Braque<br>Paris, 75003</p>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Maison Noir. All rights reserved.</span></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
