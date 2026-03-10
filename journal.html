@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal &mdash; MAISON NOIR</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="page-journal">
+
+  <div id="pageTransition" class="page-transition"><div class="transition-logo">MAISON NOIR</div></div>
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-left"><a href="index.html" class="nav-logo page-link">MN</a></div>
+    <div class="nav-center">
+      <a href="collections.html" class="nav-link page-link" data-hover="Collections">Collections</a>
+      <a href="lookbook.html" class="nav-link page-link" data-hover="Lookbook">Lookbook</a>
+      <a href="journal.html" class="nav-link active" data-hover="Journal">Journal</a>
+      <a href="about.html" class="nav-link page-link" data-hover="About">About</a>
+    </div>
+    <div class="nav-right">
+      <a href="contact.html" class="nav-link page-link nav-contact" data-hover="Contact">Contact</a>
+      <button class="nav-menu-btn" id="menuBtn"><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- FULLSCREEN MENU -->
+  <div id="fullMenu" class="full-menu">
+    <div class="menu-grid">
+      <div class="menu-col">
+        <span class="menu-label">Navigate</span>
+        <a href="index.html" class="menu-link page-link">Home</a>
+        <a href="collections.html" class="menu-link page-link">Collections</a>
+        <a href="lookbook.html" class="menu-link page-link">Lookbook</a>
+        <a href="journal.html" class="menu-link">Journal</a>
+        <a href="about.html" class="menu-link page-link">About</a>
+      </div>
+      <div class="menu-col">
+        <span class="menu-label">Connect</span>
+        <a href="contact.html" class="menu-link page-link">Contact</a>
+        <a href="#" class="menu-link">Instagram</a>
+        <a href="#" class="menu-link">Pinterest</a>
+      </div>
+      <div class="menu-col menu-featured">
+        <span class="menu-label">Latest</span>
+        <div class="menu-featured-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80" alt="Featured" loading="lazy"></div>
+        <span class="menu-caption">SS26 Campaign &rarr;</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- JOURNAL HEADER -->
+  <header class="page-header">
+    <div class="page-header-inner">
+      <span class="page-header-tag">Dispatches</span>
+      <h1 class="page-header-title">Journal</h1>
+      <p class="page-header-sub">Notes from the atelier, the road, and the spaces between.</p>
+    </div>
+  </header>
+
+  <!-- FEATURED ARTICLE -->
+  <section class="journal-featured">
+    <div class="journal-featured-inner scroll-reveal">
+      <div class="journal-featured-img">
+        <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=1200&q=85" alt="Featured Article" loading="lazy">
+      </div>
+      <div class="journal-featured-content">
+        <span class="journal-featured-tag">Featured &mdash; March 2026</span>
+        <h2 class="journal-featured-title">The Architecture of Absence</h2>
+        <p class="journal-featured-excerpt">Every season, fashion adds. More embellishment, more logos, more noise. At Maison Noir, the most radical thing we do is subtract. A deep dive into reductive design and why emptiness is the ultimate luxury.</p>
+        <a href="#" class="editorial-link">Read Full Article &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNAL GRID -->
+  <section class="journal-grid-section">
+    <div class="journal-grid">
+
+      <article class="journal-article scroll-reveal">
+        <a href="#">
+          <div class="journal-article-img">
+            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&q=80" alt="Dead Stock Diaries" loading="lazy">
+            <span class="journal-article-category">Process</span>
+          </div>
+          <div class="journal-article-content">
+            <span class="journal-article-date">February 2026</span>
+            <h3 class="journal-article-title">Dead Stock Diaries: Milan</h3>
+            <p class="journal-article-excerpt">Inside the forgotten warehouses of northern Italy, where bolts of cloth that were never meant to see daylight become the foundation of everything we make.</p>
+            <span class="journal-read-more">Read &rarr;</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="journal-article scroll-reveal">
+        <a href="#">
+          <div class="journal-article-img">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80" alt="Fashion Week" loading="lazy">
+            <span class="journal-article-category">Opinion</span>
+          </div>
+          <div class="journal-article-content">
+            <span class="journal-article-date">January 2026</span>
+            <h3 class="journal-article-title">Why We Don't Do Fashion Week</h3>
+            <p class="journal-article-excerpt">The runway is a performance for an audience of buyers and influencers. We prefer the quiet conviction of a well-made thing, discovered in its own time.</p>
+            <span class="journal-read-more">Read &rarr;</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="journal-article scroll-reveal">
+        <a href="#">
+          <div class="journal-article-img">
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80" alt="Brutalist" loading="lazy">
+            <span class="journal-article-category">Editorial</span>
+          </div>
+          <div class="journal-article-content">
+            <span class="journal-article-date">December 2025</span>
+            <h3 class="journal-article-title">Concrete &amp; Silk: Shooting SS26</h3>
+            <p class="journal-article-excerpt">Director's notes from our SS26 editorial campaign across Belgrade, Tbilisi, and Marseille. On finding beauty in abandonment.</p>
+            <span class="journal-read-more">Read &rarr;</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="journal-article scroll-reveal">
+        <a href="#">
+          <div class="journal-article-img">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80" alt="Atelier" loading="lazy">
+            <span class="journal-article-category">Atelier</span>
+          </div>
+          <div class="journal-article-content">
+            <span class="journal-article-date">November 2025</span>
+            <h3 class="journal-article-title">40 Hours with the Architect Coat</h3>
+            <p class="journal-article-excerpt">From first drape to final press: a photo essay documenting the creation of our signature piece from start to finish in our Paris atelier.</p>
+            <span class="journal-read-more">Read &rarr;</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="journal-article scroll-reveal">
+        <a href="#">
+          <div class="journal-article-img">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Interview" loading="lazy">
+            <span class="journal-article-category">Conversation</span>
+          </div>
+          <div class="journal-article-content">
+            <span class="journal-article-date">October 2025</span>
+            <h3 class="journal-article-title">The Noise Problem: An Interview</h3>
+            <p class="journal-article-excerpt">Our founders sit down to discuss anti-marketing, the death of the fashion cycle, and why the best brand strategy is having no strategy at all.</p>
+            <span class="journal-read-more">Read &rarr;</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="journal-article scroll-reveal">
+        <a href="#">
+          <div class="journal-article-img">
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&q=80" alt="Sustainability" loading="lazy">
+            <span class="journal-article-category">Process</span>
+          </div>
+          <div class="journal-article-content">
+            <span class="journal-article-date">September 2025</span>
+            <h3 class="journal-article-title">Zero Synthetic: Our Fabric Commitment</h3>
+            <p class="journal-article-excerpt">Why we banned synthetic fibers entirely and how dead-stock sourcing changed everything about our relationship with materials.</p>
+            <span class="journal-read-more">Read &rarr;</span>
+          </div>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="contact-section">
+    <div class="contact-inner">
+      <h2 class="contact-title scroll-reveal">Words, not noise.</h2>
+      <p class="contact-sub scroll-reveal">Subscribe to the journal. One dispatch per month, maximum.</p>
+      <form class="contact-form scroll-reveal">
+        <input type="email" placeholder="your@email.com" class="contact-input" required>
+        <button type="submit" class="contact-btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col"><span class="footer-logo">MAISON NOIR</span><p class="footer-tagline">Silence is luxury.</p></div>
+      <div class="footer-col">
+        <span class="footer-label">Explore</span>
+        <a href="collections.html" class="page-link">Collections</a>
+        <a href="lookbook.html" class="page-link">Lookbook</a>
+        <a href="journal.html">Journal</a>
+        <a href="about.html" class="page-link">About</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">Connect</span>
+        <a href="contact.html" class="page-link">Contact</a>
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">Details</span>
+        <p>13 Rue de Braque<br>Paris, 75003</p>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Maison Noir. All rights reserved.</span></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
