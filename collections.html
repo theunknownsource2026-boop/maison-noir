@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collections &mdash; MAISON NOIR</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="page-collections">
+
+  <div id="pageTransition" class="page-transition"><div class="transition-logo">MAISON NOIR</div></div>
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-left"><a href="index.html" class="nav-logo page-link">MN</a></div>
+    <div class="nav-center">
+      <a href="collections.html" class="nav-link active" data-hover="Collections">Collections</a>
+      <a href="lookbook.html" class="nav-link page-link" data-hover="Lookbook">Lookbook</a>
+      <a href="journal.html" class="nav-link page-link" data-hover="Journal">Journal</a>
+      <a href="about.html" class="nav-link page-link" data-hover="About">About</a>
+    </div>
+    <div class="nav-right">
+      <a href="contact.html" class="nav-link page-link nav-contact" data-hover="Contact">Contact</a>
+      <button class="nav-menu-btn" id="menuBtn"><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- FULLSCREEN MENU -->
+  <div id="fullMenu" class="full-menu">
+    <div class="menu-grid">
+      <div class="menu-col">
+        <span class="menu-label">Navigate</span>
+        <a href="index.html" class="menu-link page-link">Home</a>
+        <a href="collections.html" class="menu-link">Collections</a>
+        <a href="lookbook.html" class="menu-link page-link">Lookbook</a>
+        <a href="journal.html" class="menu-link page-link">Journal</a>
+        <a href="about.html" class="menu-link page-link">About</a>
+      </div>
+      <div class="menu-col">
+        <span class="menu-label">Connect</span>
+        <a href="contact.html" class="menu-link page-link">Contact</a>
+        <a href="#" class="menu-link">Instagram</a>
+        <a href="#" class="menu-link">Pinterest</a>
+      </div>
+      <div class="menu-col menu-featured">
+        <span class="menu-label">Latest</span>
+        <div class="menu-featured-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80" alt="Featured" loading="lazy"></div>
+        <span class="menu-caption">SS26 Campaign &rarr;</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="page-header-inner">
+      <span class="page-header-tag">SS26 Archive</span>
+      <h1 class="page-header-title">Collections</h1>
+      <p class="page-header-sub">Every piece designed to outlast the season that inspired it.</p>
+    </div>
+  </header>
+
+  <!-- FILTER BAR -->
+  <section class="filter-bar">
+    <div class="filter-bar-inner">
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="outerwear">Outerwear</button>
+        <button class="filter-tab" data-filter="tailoring">Tailoring</button>
+        <button class="filter-tab" data-filter="knitwear">Knitwear</button>
+        <button class="filter-tab" data-filter="dresses">Dresses</button>
+        <button class="filter-tab" data-filter="essentials">Essentials</button>
+      </div>
+      <div class="filter-sort">
+        <select class="sort-select" id="sortSelect">
+          <option value="featured">Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="newest">Newest</option>
+        </select>
+      </div>
+    </div>
+    <div class="filter-count"><span id="productCount">12</span> pieces</div>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <section class="products-grid">
+    <div class="products-grid-inner">
+
+      <div class="product-card scroll-reveal" data-category="outerwear" data-price="2400" data-date="2026-01">
+        <a href="product.html?piece=architect-coat" class="page-link">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1592878904946-b3cd8ae243d0?w=800&q=80" alt="The Architect Coat" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80" alt="The Architect Coat Alt" loading="lazy" class="product-card-img-hover">
+            <span class="product-badge">Signature</span>
+            <div class="quick-view-btn">Quick View</div>
+          </div>
+          <div class="product-card-info">
+            <span class="product-card-name">The Architect Coat</span>
+            <span class="product-card-category">Outerwear</span>
+            <span class="product-card-price">&euro;2,400</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card scroll-reveal" data-category="essentials" data-price="1100" data-date="2026-01">
+        <a href="product.html?piece=raw-silk-drape" class="page-link">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80" alt="Raw Silk Drape" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&q=80" alt="Raw Silk Drape Alt" loading="lazy" class="product-card-img-hover">
+            <div class="quick-view-btn">Quick View</div>
+          </div>
+          <div class="product-card-info">
+            <span class="product-card-name">Raw Silk Drape</span>
+            <span class="product-card-category">Essentials</span>
+            <span class="product-card-price">&euro;1,100</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card scroll-reveal" data-category="tailoring" data-price="1800" data-date="2026-02">
+        <a href="product.html?piece=deconstructed-blazer" class="page-link">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=800&q=80" alt="Deconstructed Blazer" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80" alt="Deconstructed Blazer Alt" loading="lazy" class="product-card-img-hover">
+            <span class="product-badge">New</span>
+            <div class="quick-view-btn">Quick View</div>
+          </div>
+          <div class="product-card-info">
+            <span class="product-card-name">Deconstructed Blazer</span>
+            <span class="product-card-category">Tailoring</span>
+            <span class="product-card-price">&euro;1,800</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card scroll-reveal" data-category="dresses" data-price="2100" data-date="2025-12">
+        <a href="product.html?piece=column-dress" class="page-link">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80" alt="Column Dress" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80" alt="Column Dress Alt" loading="lazy" class="product-card-img-hover">
+            <div class="quick-view-btn">Quick View</div>
+          </div>
+          <div class="product-card-info">
+            <span class="product-card-name">Column Dress</span>
+            <span class="product-card-category">Dresses</span>
+            <span class="product-card-price">&euro;2,100</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card scroll-reveal" data-category="essentials" data-price="890" data-date="2025-11">
+        <a href="product.html?piece=shadow-trousers" class="page-link">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&q=80" alt="Shadow Trousers" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1544441893-675973e31985?w=800&q=80" alt="Shadow Trousers Alt" loading="lazy" class="product-card-img-hover">
+            <div class="quick-view-btn">Quick View</div>
+          </div>
+          <div class="product-card-info">
+            <span class="product-card-name">Shadow Trousers</span>
+            <span class="product-card-category">Essentials</span>
+            <span class="product-card-price">&euro;890</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card scroll-reveal" data-category="knitwear" data-price="760" data-date="2025-11">
+        <a href="product.html?piece=void-knit" class="page-link">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1544441893-675973e31985?w=800&q=80" alt="Void Knit" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&q=80" alt="Void Knit Alt" loading="lazy" class="product-card-img-hover">
+            <div class="quick-view-btn">Quick View</div>
+          </div>
+          <div class="product-card-info">
+            <span class="product-card-name">Void Knit</span>
+            <span class="product-card-category">Knitwear</span>
+            <span class="product-card-price">&euro;760</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card scroll-reveal" data-category="outerwear" data-price="3200" data-date="2026-03">
+        <a href="product.html?piece=monolith-trench" class="page-link">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=800&q=80" alt="Monolith Trench" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1592878904946-b3cd8ae243d0?w=800&q=80" alt="Monolith Trench Alt" loading="lazy" class="product-card-img-hover">
+            <span class="product-badge">New</span>
+            <div class="quick-view-btn">Quick View</div>
+          </div>
+          <div class="product-card-info">
+            <span class="product-card-name">Monolith Trench</span>
+            <span class="product-card-category">Outerwear</span>
+            <span class="product-card-price">&euro;3,200</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card scroll-reveal" data-category="tailoring" data-price="1450" data-date="2026-02">
+        <a href="product.html?piece=phantom-suit" class="page-link">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Phantom Suit Jacket" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=800&q=80" alt="Phantom Suit Alt" loading="lazy" class="product-card-img-hover">
+            <div class="quick-view-btn">Quick View</div>
+          </div>
+          <div class="product-card-info">
+            <span class="product-card-name">Phantom Suit Jacket</span>
+            <span class="product-card-category">Tailoring</span>
+            <span class="product-card-price">&euro;1,450</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card scroll-reveal" data-category="knitwear" data-price="680" data-date="2026-01">
+        <a href="product.html?piece=obsidian-turtleneck" class="page-link">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cda3b00?w=800&q=80" alt="Obsidian Turtleneck" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1544441893-675973e31985?w=800&q=80" alt="Obsidian Turtleneck Alt" loading="lazy" class="product-card-img-hover">
+            <div class="quick-view-btn">Quick View</div>
+          </div>
+          <div class="product-card-info">
+            <span class="product-card-name">Obsidian Turtleneck</span>
+            <span class="product-card-category">Knitwear</span>
+            <span class="product-card-price">&euro;680</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card scroll-reveal" data-category="dresses" data-price="1900" data-date="2026-03">
+        <a href="product.html?piece=eclipse-gown" class="page-link">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?w=800&q=80" alt="Eclipse Gown" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80" alt="Eclipse Gown Alt" loading="lazy" class="product-card-img-hover">
+            <span class="product-badge">Limited</span>
+            <div class="quick-view-btn">Quick View</div>
+          </div>
+          <div class="product-card-info">
+            <span class="product-card-name">Eclipse Gown</span>
+            <span class="product-card-category">Dresses</span>
+            <span class="product-card-price">&euro;1,900</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card scroll-reveal" data-category="essentials" data-price="420" data-date="2025-12">
+        <a href="product.html?piece=noir-tee" class="page-link">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80" alt="Noir Tee" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&q=80" alt="Noir Tee Alt" loading="lazy" class="product-card-img-hover">
+            <div class="quick-view-btn">Quick View</div>
+          </div>
+          <div class="product-card-info">
+            <span class="product-card-name">Noir Essential Tee</span>
+            <span class="product-card-category">Essentials</span>
+            <span class="product-card-price">&euro;420</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="product-card scroll-reveal" data-category="outerwear" data-price="2800" data-date="2026-02">
+        <a href="product.html?piece=brutalist-parka" class="page-link">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=800&q=80" alt="Brutalist Parka" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=800&q=80" alt="Brutalist Parka Alt" loading="lazy" class="product-card-img-hover">
+            <span class="product-badge">Signature</span>
+            <div class="quick-view-btn">Quick View</div>
+          </div>
+          <div class="product-card-info">
+            <span class="product-card-name">Brutalist Parka</span>
+            <span class="product-card-category">Outerwear</span>
+            <span class="product-card-price">&euro;2,800</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUICK VIEW MODAL -->
+  <div id="quickViewModal" class="quick-view-modal">
+    <div class="quick-view-overlay"></div>
+    <div class="quick-view-content">
+      <button class="quick-view-close">&times;</button>
+      <div class="quick-view-grid">
+        <div class="quick-view-image">
+          <img id="qvImage" src="" alt="Quick View">
+        </div>
+        <div class="quick-view-details">
+          <span class="quick-view-category" id="qvCategory"></span>
+          <h2 class="quick-view-name" id="qvName"></h2>
+          <span class="quick-view-price" id="qvPrice"></span>
+          <p class="quick-view-desc">Handcrafted in our Paris atelier from sustainably sourced materials. Each piece is individually numbered and made to order.</p>
+          <div class="quick-view-sizes">
+            <span class="size-label">Size</span>
+            <div class="size-options">
+              <button class="size-btn">XS</button>
+              <button class="size-btn active">S</button>
+              <button class="size-btn">M</button>
+              <button class="size-btn">L</button>
+              <button class="size-btn">XL</button>
+            </div>
+          </div>
+          <a href="#" id="qvLink" class="btn-primary page-link">View Full Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <section class="contact-section">
+    <div class="contact-inner">
+      <h2 class="contact-title scroll-reveal">Be the first to know.</h2>
+      <p class="contact-sub scroll-reveal">New pieces. No noise.</p>
+      <form class="contact-form scroll-reveal">
+        <input type="email" placeholder="your@email.com" class="contact-input" required>
+        <button type="submit" class="contact-btn">Join</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col"><span class="footer-logo">MAISON NOIR</span><p class="footer-tagline">Silence is luxury.</p></div>
+      <div class="footer-col">
+        <span class="footer-label">Explore</span>
+        <a href="collections.html">Collections</a>
+        <a href="lookbook.html" class="page-link">Lookbook</a>
+        <a href="journal.html" class="page-link">Journal</a>
+        <a href="about.html" class="page-link">About</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">Connect</span>
+        <a href="contact.html" class="page-link">Contact</a>
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">Details</span>
+        <p>13 Rue de Braque<br>Paris, 75003</p>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Maison Noir. All rights reserved.</span></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
