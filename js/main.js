@@ -1,244 +1,243 @@
-/* ========================================
-   MAISON NOIR v2
-   Lenis + GSAP. Only purposeful motion.
-   ======================================== */
+/* ============================================
+   MAISON NOIR v3 - Interactions
+   ============================================ */
 
 (function() {
   'use strict';
 
   // ---- LOADER ----
-  const loader = document.getElementById('loader');
-  const counter = document.getElementById('loaderCounter');
-  let count = 0;
+  var loader = document.getElementById('loader');
+  var hero = document.querySelector('.hero');
 
-  function runLoader() {
-    if (!loader || !counter) return Promise.resolve();
-    return new Promise(resolve => {
-      const interval = setInterval(() => {
-        count += Math.floor(Math.random() * 8) + 2;
-        if (count >= 100) {
-          count = 100;
-          counter.textContent = count;
-          clearInterval(interval);
-          setTimeout(() => {
-            loader.classList.add('is-done');
-            setTimeout(resolve, 600);
-          }, 300);
-          return;
-        }
-        counter.textContent = count;
-      }, 40);
-    });
-  }
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      loader.classList.add('done');
+      setTimeout(function() {
+        hero.classList.add('loaded');
+        revealHero();
+      }, 300);
+    }, 1800);
+  });
 
-  // ---- LENIS SMOOTH SCROLL ----
-  let lenis;
-
-  function initLenis() {
-    if (typeof Lenis === 'undefined') return;
-    lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-    });
-
-    lenis.on('scroll', ScrollTrigger.update);
-    gsap.ticker.add((time) => lenis.raf(time * 1000));
-    gsap.ticker.lagSmoothing(0);
-  }
-
-  // ---- HERO ENTRANCE ----
-  function initHero() {
-    const title = document.querySelector('.hero-title');
-    const sub = document.querySelector('.hero-sub');
-    const img = document.querySelector('.hero-img');
-    if (!title) return;
-
-    const tl = gsap.timeline({ delay: 0.1 });
-
-    tl.to(title, {
-      clipPath: 'inset(0 0 0% 0)',
-      duration: 1.2,
-      ease: 'power3.out',
-    })
-    .to(sub, {
-      opacity: 0.6,
-      duration: 0.8,
-      ease: 'power2.out',
-    }, '-=0.5');
-
-    // Parallax on hero image
-    if (img) {
-      gsap.to(img, {
-        yPercent: 12,
-        scale: 1,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '.hero',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: true,
-        }
-      });
+  function revealHero() {
+    var heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+      heroContent.classList.add('revealed');
     }
   }
 
-  // ---- SCROLL REVEALS ----
-  function initReveals() {
-    // Fade up elements
-    const fadeEls = document.querySelectorAll(
-      '.intro-text, .editorial-text .label, .editorial-text h2, .editorial-text p, ' +
-      '.collection-header .label, .collection-header h2, .product, ' +
-      '.quote p, .newsletter-inner > *, .footer-top'
-    );
+  // ---- CUSTOM CURSOR ----
+  var cursor = document.getElementById('cursor');
+  var cursorTrail = document.getElementById('cursor-trail');
+  var mouseX = 0, mouseY = 0;
+  var cursorX = 0, cursorY = 0;
+  var trailX = 0, trailY = 0;
 
-    fadeEls.forEach((el, i) => {
-      gsap.from(el, {
-        y: 40,
-        opacity: 0,
-        duration: 0.9,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 88%',
-          once: true,
-        }
-      });
+  if (cursor && cursorTrail && window.innerWidth > 768) {
+    document.addEventListener('mousemove', function(e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
     });
 
-    // Image reveals with clip-path
-    const images = document.querySelectorAll('.img-wrap');
-    images.forEach(wrap => {
-      gsap.from(wrap, {
-        clipPath: 'inset(0 0 100% 0)',
-        duration: 1.2,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: wrap,
-          start: 'top 85%',
-          once: true,
-        }
-      });
+    function animateCursor() {
+      cursorX += (mouseX - cursorX) * 0.15;
+      cursorY += (mouseY - cursorY) * 0.15;
+      cursor.style.left = cursorX + 'px';
+      cursor.style.top = cursorY + 'px';
 
-      // Subtle parallax on editorial images
-      const img = wrap.querySelector('img');
-      if (img) {
-        gsap.to(img, {
-          yPercent: -8,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: wrap,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: true,
-          }
-        });
+      trailX += (mouseX - trailX) * 0.08;
+      trailY += (mouseY - trailY) * 0.08;
+      cursorTrail.style.left = trailX + 'px';
+      cursorTrail.style.top = trailY + 'px';
+
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    var hoverTargets = document.querySelectorAll('a, button, .collection-item, .editorial-img-wrap');
+    hoverTargets.forEach(function(el) {
+      el.addEventListener('mouseenter', function() { cursor.classList.add('hovering'); });
+      el.addEventListener('mouseleave', function() { cursor.classList.remove('hovering'); });
+    });
+  }
+
+  // ---- MENU TOGGLE ----
+  var menuBtn = document.getElementById('menuBtn');
+  var fullMenu = document.getElementById('fullMenu');
+
+  if (menuBtn && fullMenu) {
+    menuBtn.addEventListener('click', function() {
+      menuBtn.classList.toggle('active');
+      fullMenu.classList.toggle('open');
+      document.body.style.overflow = fullMenu.classList.contains('open') ? 'hidden' : '';
+    });
+
+    fullMenu.querySelectorAll('.menu-link').forEach(function(link) {
+      link.addEventListener('click', function() {
+        menuBtn.classList.remove('active');
+        fullMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // ---- SCROLL REVEAL ----
+  var revealElements = document.querySelectorAll('.scroll-reveal');
+
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
       }
     });
+  }, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -60px 0px'
+  });
 
-    // Product stagger per row
-    const products = document.querySelectorAll('.product');
-    if (products.length) {
-      gsap.from(products, {
-        y: 60,
-        opacity: 0,
-        duration: 0.8,
-        ease: 'power2.out',
-        stagger: 0.12,
-        scrollTrigger: {
-          trigger: '.collection-grid',
-          start: 'top 80%',
-          once: true,
-        }
-      });
-    }
+  revealElements.forEach(function(el) { revealObserver.observe(el); });
+
+  // ---- PARALLAX ON COLLECTION ITEMS ----
+  var collectionItems = document.querySelectorAll('.collection-item');
+
+  function parallaxScroll() {
+    collectionItems.forEach(function(item) {
+      var speed = parseFloat(item.dataset.speed) || 1;
+      var rect = item.getBoundingClientRect();
+      var center = rect.top + rect.height / 2;
+      var viewCenter = window.innerHeight / 2;
+      var offset = (center - viewCenter) * (speed - 1) * 0.3;
+      item.style.transform = 'translateY(' + offset + 'px)';
+    });
+    requestAnimationFrame(parallaxScroll);
   }
 
-  // ---- LOOKBOOK DRAG SCROLL ----
-  function initLookbook() {
-    const track = document.querySelector('.lookbook-track');
-    if (!track) return;
-
-    let isDown = false;
-    let startX, scrollStart;
-
-    track.addEventListener('mousedown', (e) => {
-      isDown = true;
-      startX = e.pageX;
-      scrollStart = track.scrollLeft || 0;
-      track.style.cursor = 'grabbing';
-    });
-
-    window.addEventListener('mouseup', () => {
-      isDown = false;
-      if (track) track.style.cursor = 'grab';
-    });
-
-    window.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const dx = e.pageX - startX;
-      // Use GSAP horizontal scroll instead of scrollLeft for Lenis compat
-      gsap.to(track, {
-        x: dx,
-        duration: 0,
-        overwrite: true,
-      });
-    });
-
-    // Horizontal scroll-triggered movement
-    const items = track.querySelectorAll('.lookbook-item');
-    if (items.length) {
-      const totalScroll = track.scrollWidth - window.innerWidth;
-      gsap.to(track, {
-        x: () => -totalScroll,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '.lookbook',
-          start: 'top top',
-          end: () => '+=' + totalScroll,
-          pin: true,
-          scrub: 1,
-          invalidateOnRefresh: true,
-        }
-      });
-    }
+  if (window.innerWidth > 768) {
+    parallaxScroll();
   }
+
+  // ---- NAV ON SCROLL ----
+  var nav = document.getElementById('nav');
+  var lastScroll = 0;
+
+  window.addEventListener('scroll', function() {
+    var currentScroll = window.scrollY;
+
+    if (currentScroll > 100) {
+      nav.style.padding = '1rem 3rem';
+    } else {
+      nav.style.padding = '1.5rem 3rem';
+    }
+
+    if (currentScroll > lastScroll && currentScroll > 500) {
+      nav.style.transform = 'translateY(-100%)';
+    } else {
+      nav.style.transform = 'translateY(0)';
+    }
+
+    nav.style.transition = 'transform 0.4s ease, padding 0.3s ease';
+    lastScroll = currentScroll;
+  });
+
+  // ---- SMOOTH ANCHOR SCROLL ----
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var target = document.querySelector(anchor.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // ---- IMAGE LAZY LOAD WITH FADE ----
+  var images = document.querySelectorAll('.item-img-wrap img, .editorial-img-wrap img, .editorial-wide img');
+
+  var imageObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var img = entry.target;
+        img.style.opacity = '0';
+        img.style.transition = 'opacity 0.8s ease';
+
+        if (img.complete) {
+          img.style.opacity = '1';
+        } else {
+          img.addEventListener('load', function() {
+            img.style.opacity = '1';
+          });
+        }
+        imageObserver.unobserve(img);
+      }
+    });
+  }, {
+    rootMargin: '200px'
+  });
+
+  images.forEach(function(img) {
+    img.style.opacity = '0';
+    imageObserver.observe(img);
+  });
+
+  // ---- COLLECTION ITEM STAGGER ----
+  var gridObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry, i) {
+      if (entry.isIntersecting) {
+        setTimeout(function() {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }, i * 120);
+        gridObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  collectionItems.forEach(function(item) {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(30px)';
+    item.style.transition = 'opacity 0.6s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+    gridObserver.observe(item);
+  });
 
   // ---- NEWSLETTER FORM ----
-  function initNewsletter() {
-    const form = document.getElementById('newsletterForm');
-    if (!form) return;
-    form.addEventListener('submit', (e) => {
+  var form = document.querySelector('.contact-form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
-      const input = form.querySelector('input');
-      if (input) {
+      var input = form.querySelector('.contact-input');
+      var btn = form.querySelector('.contact-btn');
+
+      if (input.value.indexOf('@') !== -1) {
+        btn.textContent = 'Welcome';
+        btn.style.background = 'var(--accent)';
+        btn.style.borderColor = 'var(--accent)';
         input.value = '';
-        input.placeholder = 'Thank you';
-        setTimeout(() => {
-          input.placeholder = 'Email address';
-        }, 2000);
+
+        setTimeout(function() {
+          btn.textContent = 'Join';
+          btn.style.background = '';
+          btn.style.borderColor = '';
+        }, 3000);
       }
     });
   }
 
-  // ---- INIT ----
-  async function init() {
-    gsap.registerPlugin(ScrollTrigger);
-    await runLoader();
-    initLenis();
-    initHero();
-    initReveals();
-    initLookbook();
-    initNewsletter();
-  }
+  // ---- HERO IMAGE PARALLAX ----
+  var heroImg = document.querySelector('.hero-bg img');
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
+  if (heroImg && window.innerWidth > 768) {
+    window.addEventListener('scroll', function() {
+      var scrollY = window.scrollY;
+      var heroHeight = hero.offsetHeight;
+
+      if (scrollY < heroHeight) {
+        var progress = scrollY / heroHeight;
+        heroImg.style.transform = 'scale(' + (1 + progress * 0.1) + ') translateY(' + (scrollY * 0.3) + 'px)';
+      }
+    });
   }
 
 })();
