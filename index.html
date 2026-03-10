@@ -4,201 +4,336 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MAISON NOIR</title>
-  <meta name="description" content="MAISON NOIR">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,opsz,wght@0,3..72,300;0,3..72,400;0,3..72,500;1,3..72,300;1,3..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
-  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- LOADER -->
-  <div class="loader" id="loader">
-    <div class="loader-counter" id="loaderCounter">0</div>
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-line"></div>
+      <span class="loader-text">MAISON NOIR</span>
+      <div class="loader-line"></div>
+    </div>
   </div>
 
+  <!-- CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
   <!-- NAV -->
-  <header class="nav" id="nav">
-    <a href="/" class="nav-logo">MAISON NOIR</a>
-    <nav class="nav-links">
-      <a href="/">Collection</a>
-      <a href="/">About</a>
-      <a href="/">Contact</a>
-    </nav>
-    <button class="nav-cart" aria-label="Cart">Bag (0)</button>
-  </header>
+  <nav id="nav">
+    <div class="nav-left">
+      <a href="#" class="nav-logo">MN</a>
+    </div>
+    <div class="nav-center">
+      <a href="#" class="nav-link" data-hover="Archive">Archive</a>
+      <a href="#" class="nav-link" data-hover="Collection">Collection</a>
+      <a href="#" class="nav-link" data-hover="World">World</a>
+    </div>
+    <div class="nav-right">
+      <button class="nav-menu-btn" id="menuBtn">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- FULLSCREEN MENU -->
+  <div id="fullMenu" class="full-menu">
+    <div class="menu-grid">
+      <div class="menu-col">
+        <span class="menu-label">Navigate</span>
+        <a href="#hero" class="menu-link">Home</a>
+        <a href="#collection" class="menu-link">Collection</a>
+        <a href="#editorial" class="menu-link">Editorial</a>
+        <a href="#about" class="menu-link">About</a>
+      </div>
+      <div class="menu-col">
+        <span class="menu-label">Connect</span>
+        <a href="#" class="menu-link">Instagram</a>
+        <a href="#" class="menu-link">Journal</a>
+        <a href="#" class="menu-link">Contact</a>
+      </div>
+      <div class="menu-col menu-featured">
+        <span class="menu-label">Latest</span>
+        <div class="menu-featured-img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80" alt="Featured">
+        </div>
+        <span class="menu-caption">SS26 Campaign</span>
+      </div>
+    </div>
+  </div>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-media">
-      <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1920&q=85&fm=jpg" alt="" class="hero-img">
+  <section id="hero" class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1920&q=85" alt="Hero" class="hero-img">
+      <div class="hero-grain"></div>
     </div>
     <div class="hero-content">
-      <h1 class="hero-title">Obsidian</h1>
-      <p class="hero-sub">Autumn / Winter 2026</p>
+      <div class="hero-eyebrow">
+        <span class="line-reveal">Spring / Summer 2026</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line"><span class="line-reveal">Silence</span></span>
+        <span class="title-line title-indent"><span class="line-reveal">Is</span></span>
+        <span class="title-line"><span class="line-reveal">Luxury</span></span>
+      </h1>
+      <div class="hero-cta">
+        <a href="#collection" class="btn-reveal">
+          <span class="btn-text">Enter the Collection</span>
+          <span class="btn-arrow">&rarr;</span>
+        </a>
+      </div>
     </div>
     <div class="hero-scroll">
-      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- INTRO -->
-  <section class="intro">
-    <div class="intro-inner">
-      <p class="intro-text">Fourteen pieces. Zero compromise. An exploration of shadow, texture, and the quiet power of restraint.</p>
+  <!-- MARQUEE -->
+  <section class="marquee-section">
+    <div class="marquee-track">
+      <span>MAISON NOIR</span>
+      <span>&mdash;</span>
+      <span>EST. 2024</span>
+      <span>&mdash;</span>
+      <span>PARIS</span>
+      <span>&mdash;</span>
+      <span>TOKYO</span>
+      <span>&mdash;</span>
+      <span>NEW YORK</span>
+      <span>&mdash;</span>
+      <span>MAISON NOIR</span>
+      <span>&mdash;</span>
+      <span>EST. 2024</span>
+      <span>&mdash;</span>
+      <span>PARIS</span>
+      <span>&mdash;</span>
+      <span>TOKYO</span>
+      <span>&mdash;</span>
+      <span>NEW YORK</span>
+      <span>&mdash;</span>
     </div>
   </section>
 
-  <!-- EDITORIAL -->
-  <section class="editorial">
-    <div class="editorial-row">
-      <div class="editorial-image">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=900&q=80&fm=jpg" alt="" loading="lazy">
+  <!-- PHILOSOPHY -->
+  <section id="about" class="philosophy">
+    <div class="philosophy-grid">
+      <div class="philosophy-left">
+        <span class="section-tag">001 / Philosophy</span>
+        <h2 class="philosophy-title scroll-reveal">We don't<br>follow<br>seasons.</h2>
+      </div>
+      <div class="philosophy-right">
+        <p class="philosophy-text scroll-reveal">Maison Noir exists outside the fashion calendar. No drops. No hype cycles. Each piece is developed until it's inevitable -- then released without announcement. If you know, you know.</p>
+        <p class="philosophy-text scroll-reveal">We build for people who dress for themselves. Not for the algorithm. Not for the crowd. For the mirror.</p>
+        <div class="philosophy-stats scroll-reveal">
+          <div class="stat">
+            <span class="stat-num">12</span>
+            <span class="stat-label">Pieces per year</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">1</span>
+            <span class="stat-label">Standard</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">0</span>
+            <span class="stat-label">Compromises</span>
+          </div>
         </div>
-      </div>
-      <div class="editorial-text">
-        <span class="label">The Philosophy</span>
-        <h2>Less noise.<br>More intention.</h2>
-        <p>Every piece exists beyond trends. Luxury lies in the weight of the fabric, the precision of the cut, and the silence of restraint.</p>
-      </div>
-    </div>
-    <div class="editorial-row editorial-row--reverse">
-      <div class="editorial-image">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=900&q=80&fm=jpg" alt="" loading="lazy">
-        </div>
-      </div>
-      <div class="editorial-text">
-        <span class="label">The Process</span>
-        <h2>Cut in Milan.<br>Finished by hand.</h2>
-        <p>Twelve artisans. Six hundred hours per collection. Each seam is a decision. Each fold, an intention.</p>
       </div>
     </div>
   </section>
 
   <!-- COLLECTION -->
-  <section class="collection">
+  <section id="collection" class="collection">
     <div class="collection-header">
-      <span class="label">The Obsidian Edit</span>
-      <h2>Collection</h2>
+      <span class="section-tag">002 / Collection</span>
+      <h2 class="collection-title scroll-reveal">Current Archive</h2>
     </div>
     <div class="collection-grid">
-      <a href="#" class="product">
-        <div class="product-img">
-          <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=700&q=80&fm=jpg" alt="Structured Blazer" loading="lazy">
+      <div class="collection-item" data-speed="0.9">
+        <div class="item-img-wrap">
+          <img src="https://images.unsplash.com/photo-1592878904946-b3cd8ae243d0?w=800&q=80" alt="Structured Coat">
+          <div class="item-overlay">
+            <span>View Piece</span>
+          </div>
         </div>
-        <div class="product-info">
-          <span class="product-name">Structured Blazer</span>
-          <span class="product-price">$1,890</span>
+        <div class="item-info">
+          <span class="item-name">The Architect Coat</span>
+          <span class="item-price">&euro;2,400</span>
         </div>
-      </a>
-      <a href="#" class="product">
-        <div class="product-img">
-          <img src="https://images.unsplash.com/photo-1608236415053-3691791bbffe?w=700&q=80&fm=jpg" alt="Wool Overcoat" loading="lazy">
+      </div>
+      <div class="collection-item" data-speed="1.1">
+        <div class="item-img-wrap">
+          <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80" alt="Silk Layer">
+          <div class="item-overlay">
+            <span>View Piece</span>
+          </div>
         </div>
-        <div class="product-info">
-          <span class="product-name">Wool Overcoat</span>
-          <span class="product-price">$2,450</span>
+        <div class="item-info">
+          <span class="item-name">Raw Silk Drape</span>
+          <span class="item-price">&euro;1,100</span>
         </div>
-      </a>
-      <a href="#" class="product">
-        <div class="product-img">
-          <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=700&q=80&fm=jpg" alt="Silk Shirt" loading="lazy">
+      </div>
+      <div class="collection-item" data-speed="0.95">
+        <div class="item-img-wrap">
+          <img src="https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=800&q=80" alt="Noir Blazer">
+          <div class="item-overlay">
+            <span>View Piece</span>
+          </div>
         </div>
-        <div class="product-info">
-          <span class="product-name">Silk Shirt</span>
-          <span class="product-price">$680</span>
+        <div class="item-info">
+          <span class="item-name">Deconstructed Blazer</span>
+          <span class="item-price">&euro;1,800</span>
         </div>
-      </a>
-      <a href="#" class="product">
-        <div class="product-img">
-          <img src="https://images.unsplash.com/photo-1621072156002-e2fccdc0b176?w=700&q=80&fm=jpg" alt="Cashmere Knit" loading="lazy">
+      </div>
+      <div class="collection-item" data-speed="1.05">
+        <div class="item-img-wrap">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80" alt="Column Dress">
+          <div class="item-overlay">
+            <span>View Piece</span>
+          </div>
         </div>
-        <div class="product-info">
-          <span class="product-name">Cashmere Knit</span>
-          <span class="product-price">$1,240</span>
+        <div class="item-info">
+          <span class="item-name">Column Dress</span>
+          <span class="item-price">&euro;2,100</span>
         </div>
-      </a>
-      <a href="#" class="product">
-        <div class="product-img">
-          <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=700&q=80&fm=jpg" alt="Tailored Trousers" loading="lazy">
+      </div>
+      <div class="collection-item" data-speed="0.92">
+        <div class="item-img-wrap">
+          <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&q=80" alt="Layered Look">
+          <div class="item-overlay">
+            <span>View Piece</span>
+          </div>
         </div>
-        <div class="product-info">
-          <span class="product-name">Tailored Trousers</span>
-          <span class="product-price">$890</span>
+        <div class="item-info">
+          <span class="item-name">Shadow Trousers</span>
+          <span class="item-price">&euro;890</span>
         </div>
-      </a>
-      <a href="#" class="product">
-        <div class="product-img">
-          <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=700&q=80&fm=jpg" alt="Leather Holdall" loading="lazy">
+      </div>
+      <div class="collection-item" data-speed="1.08">
+        <div class="item-img-wrap">
+          <img src="https://images.unsplash.com/photo-1544441893-675973e31985?w=800&q=80" alt="Knit">
+          <div class="item-overlay">
+            <span>View Piece</span>
+          </div>
         </div>
-        <div class="product-info">
-          <span class="product-name">Leather Holdall</span>
-          <span class="product-price">$3,200</span>
+        <div class="item-info">
+          <span class="item-name">Void Knit</span>
+          <span class="item-price">&euro;760</span>
         </div>
-      </a>
+      </div>
     </div>
   </section>
 
-  <!-- LOOKBOOK STRIP -->
-  <section class="lookbook">
-    <div class="lookbook-track">
-      <div class="lookbook-item"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80&fm=jpg" alt="" loading="lazy"></div>
-      <div class="lookbook-item"><img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80&fm=jpg" alt="" loading="lazy"></div>
-      <div class="lookbook-item"><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&q=80&fm=jpg" alt="" loading="lazy"></div>
-      <div class="lookbook-item"><img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&q=80&fm=jpg" alt="" loading="lazy"></div>
-      <div class="lookbook-item"><img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=600&q=80&fm=jpg" alt="" loading="lazy"></div>
+  <!-- EDITORIAL SPLIT -->
+  <section id="editorial" class="editorial">
+    <div class="editorial-header">
+      <span class="section-tag">003 / Editorial</span>
+    </div>
+    <div class="editorial-split">
+      <div class="editorial-left">
+        <div class="editorial-img-wrap scroll-reveal">
+          <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=900&q=80" alt="Editorial 1">
+        </div>
+      </div>
+      <div class="editorial-right">
+        <div class="editorial-text-block">
+          <h3 class="editorial-heading scroll-reveal">"Fashion is armor<br>for the everyday war."</h3>
+          <p class="editorial-body scroll-reveal">Shot on location in abandoned brutalist architecture across Eastern Europe. The SS26 editorial strips fashion back to its core tension -- the body versus the structure that contains it.</p>
+          <a href="#" class="editorial-link scroll-reveal">Read the full story &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <div class="editorial-wide scroll-reveal">
+      <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=1400&q=80" alt="Editorial Wide">
+      <div class="editorial-wide-caption">
+        <span>The Architect Coat / Deconstructed Blazer</span>
+        <span>Editorial SS26</span>
+      </div>
     </div>
   </section>
 
-  <!-- QUOTE -->
-  <section class="quote-section">
-    <blockquote class="quote">
-      <p>"Elegance is not about being noticed.<br>It is about being remembered."</p>
-    </blockquote>
+  <!-- PROCESS -->
+  <section class="process">
+    <div class="process-header">
+      <span class="section-tag">004 / Process</span>
+      <h2 class="process-title scroll-reveal">Built, not manufactured.</h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step scroll-reveal">
+        <span class="step-num">01</span>
+        <div class="step-content">
+          <h4>Source</h4>
+          <p>Dead-stock fabrics and single-origin mills. We never produce new textiles when existing ones will do.</p>
+        </div>
+      </div>
+      <div class="process-step scroll-reveal">
+        <span class="step-num">02</span>
+        <div class="step-content">
+          <h4>Pattern</h4>
+          <p>Each pattern is draped on the form, not drafted on screen. The fabric decides the silhouette.</p>
+        </div>
+      </div>
+      <div class="process-step scroll-reveal">
+        <span class="step-num">03</span>
+        <div class="step-content">
+          <h4>Construct</h4>
+          <p>Hand-finished in a single atelier. One maker sees each piece from cut to final press.</p>
+        </div>
+      </div>
+      <div class="process-step scroll-reveal">
+        <span class="step-num">04</span>
+        <div class="step-content">
+          <h4>Release</h4>
+          <p>No pre-orders. No waitlists. When it's ready, it appears. First come, only come.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- NEWSLETTER -->
-  <section class="newsletter">
-    <div class="newsletter-inner">
-      <h2>Join the Inner Circle</h2>
-      <p>Early access. Private events. Stories from the atelier.</p>
-      <form class="newsletter-form" id="newsletterForm">
-        <input type="email" placeholder="Email address" required>
-        <button type="submit">Subscribe</button>
+  <!-- NEWSLETTER / CONTACT -->
+  <section class="contact">
+    <div class="contact-inner">
+      <h2 class="contact-title scroll-reveal">Stay in the dark.</h2>
+      <p class="contact-sub scroll-reveal">Private list. No spam. First access to new pieces.</p>
+      <form class="contact-form scroll-reveal">
+        <input type="email" placeholder="your@email.com" class="contact-input">
+        <button type="submit" class="contact-btn">Join</button>
       </form>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-brand">
+    <div class="footer-grid">
+      <div class="footer-col">
         <span class="footer-logo">MAISON NOIR</span>
+        <p class="footer-tagline">Silence is luxury.</p>
       </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <a href="#">Collection</a>
-          <a href="#">Lookbook</a>
-          <a href="#">About</a>
-        </div>
-        <div class="footer-col">
-          <a href="#">Shipping</a>
-          <a href="#">Returns</a>
-          <a href="#">Contact</a>
-        </div>
-        <div class="footer-col">
-          <a href="#">Instagram</a>
-          <a href="#">Pinterest</a>
-        </div>
+      <div class="footer-col">
+        <span class="footer-label">Location</span>
+        <p>13 Rue de Braque<br>Paris, 75003</p>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">Social</span>
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">Legal</span>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 MAISON NOIR</span>
+      <span>&copy; 2026 Maison Noir. All rights reserved.</span>
     </div>
   </footer>
 
