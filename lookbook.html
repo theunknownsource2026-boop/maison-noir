@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lookbook &mdash; MAISON NOIR</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="page-lookbook">
+
+  <div id="pageTransition" class="page-transition"><div class="transition-logo">MAISON NOIR</div></div>
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-left"><a href="index.html" class="nav-logo page-link">MN</a></div>
+    <div class="nav-center">
+      <a href="collections.html" class="nav-link page-link" data-hover="Collections">Collections</a>
+      <a href="lookbook.html" class="nav-link active" data-hover="Lookbook">Lookbook</a>
+      <a href="journal.html" class="nav-link page-link" data-hover="Journal">Journal</a>
+      <a href="about.html" class="nav-link page-link" data-hover="About">About</a>
+    </div>
+    <div class="nav-right">
+      <a href="contact.html" class="nav-link page-link nav-contact" data-hover="Contact">Contact</a>
+      <button class="nav-menu-btn" id="menuBtn"><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- FULLSCREEN MENU -->
+  <div id="fullMenu" class="full-menu">
+    <div class="menu-grid">
+      <div class="menu-col">
+        <span class="menu-label">Navigate</span>
+        <a href="index.html" class="menu-link page-link">Home</a>
+        <a href="collections.html" class="menu-link page-link">Collections</a>
+        <a href="lookbook.html" class="menu-link">Lookbook</a>
+        <a href="journal.html" class="menu-link page-link">Journal</a>
+        <a href="about.html" class="menu-link page-link">About</a>
+      </div>
+      <div class="menu-col">
+        <span class="menu-label">Connect</span>
+        <a href="contact.html" class="menu-link page-link">Contact</a>
+        <a href="#" class="menu-link">Instagram</a>
+        <a href="#" class="menu-link">Pinterest</a>
+      </div>
+      <div class="menu-col menu-featured">
+        <span class="menu-label">Latest</span>
+        <div class="menu-featured-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80" alt="Featured" loading="lazy"></div>
+        <span class="menu-caption">SS26 Campaign &rarr;</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOOKBOOK HERO -->
+  <header class="lookbook-hero">
+    <div class="lookbook-hero-bg">
+      <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1920&q=85" alt="Lookbook Hero" loading="eager">
+      <div class="hero-grain"></div>
+    </div>
+    <div class="lookbook-hero-content">
+      <span class="lookbook-hero-tag">SS26 Editorial</span>
+      <h1 class="lookbook-hero-title">Concrete<br>Elegance</h1>
+      <p class="lookbook-hero-sub">Shot across abandoned brutalist landmarks in Belgrade, Tbilisi, and Marseille. Styled by Ana Kovic. Photography by Luka Novak.</p>
+    </div>
+  </header>
+
+  <!-- CAMPAIGN STATEMENT -->
+  <section class="lookbook-statement">
+    <div class="lookbook-statement-inner">
+      <blockquote class="lookbook-quote scroll-reveal">
+        "We wanted to place these garments where beauty has been forgotten &mdash; and watch them remind the space what it used to be."
+      </blockquote>
+      <cite class="lookbook-cite scroll-reveal">&mdash; Ana Kovic, Creative Director</cite>
+    </div>
+  </section>
+
+  <!-- MASONRY GALLERY -->
+  <section class="lookbook-gallery">
+    <div class="lookbook-gallery-inner">
+
+      <div class="lookbook-item lookbook-item-tall scroll-reveal" data-lightbox>
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=900&q=85" alt="Look 1" loading="lazy">
+        <div class="lookbook-item-info">
+          <span class="lookbook-look-num">Look 01</span>
+          <span class="lookbook-pieces">The Architect Coat, Shadow Trousers</span>
+        </div>
+      </div>
+
+      <div class="lookbook-item scroll-reveal" data-lightbox>
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900&q=85" alt="Look 2" loading="lazy">
+        <div class="lookbook-item-info">
+          <span class="lookbook-look-num">Look 02</span>
+          <span class="lookbook-pieces">Column Dress</span>
+        </div>
+      </div>
+
+      <div class="lookbook-item scroll-reveal" data-lightbox>
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=900&q=85" alt="Look 3" loading="lazy">
+        <div class="lookbook-item-info">
+          <span class="lookbook-look-num">Look 03</span>
+          <span class="lookbook-pieces">Deconstructed Blazer, Noir Essential Tee</span>
+        </div>
+      </div>
+
+      <div class="lookbook-item lookbook-item-wide scroll-reveal" data-lightbox>
+        <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=1400&q=85" alt="Look 4" loading="lazy">
+        <div class="lookbook-item-info">
+          <span class="lookbook-look-num">Look 04</span>
+          <span class="lookbook-pieces">Monolith Trench, Obsidian Turtleneck</span>
+        </div>
+      </div>
+
+      <div class="lookbook-item lookbook-item-tall scroll-reveal" data-lightbox>
+        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=900&q=85" alt="Look 5" loading="lazy">
+        <div class="lookbook-item-info">
+          <span class="lookbook-look-num">Look 05</span>
+          <span class="lookbook-pieces">Shadow Trousers, Void Knit</span>
+        </div>
+      </div>
+
+      <div class="lookbook-item scroll-reveal" data-lightbox>
+        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=900&q=85" alt="Look 6" loading="lazy">
+        <div class="lookbook-item-info">
+          <span class="lookbook-look-num">Look 06</span>
+          <span class="lookbook-pieces">Eclipse Gown</span>
+        </div>
+      </div>
+
+      <div class="lookbook-item scroll-reveal" data-lightbox>
+        <img src="https://images.unsplash.com/photo-1592878904946-b3cd8ae243d0?w=900&q=85" alt="Look 7" loading="lazy">
+        <div class="lookbook-item-info">
+          <span class="lookbook-look-num">Look 07</span>
+          <span class="lookbook-pieces">Brutalist Parka</span>
+        </div>
+      </div>
+
+      <div class="lookbook-item lookbook-item-wide scroll-reveal" data-lightbox>
+        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=1400&q=85" alt="Look 8" loading="lazy">
+        <div class="lookbook-item-info">
+          <span class="lookbook-look-num">Look 08</span>
+          <span class="lookbook-pieces">Raw Silk Drape, Phantom Suit Jacket</span>
+        </div>
+      </div>
+
+      <div class="lookbook-item scroll-reveal" data-lightbox>
+        <img src="https://images.unsplash.com/photo-1578932750294-f5075e85f44a?w=900&q=85" alt="Look 9" loading="lazy">
+        <div class="lookbook-item-info">
+          <span class="lookbook-look-num">Look 09</span>
+          <span class="lookbook-pieces">Phantom Suit Jacket, Shadow Trousers</span>
+        </div>
+      </div>
+
+      <div class="lookbook-item lookbook-item-tall scroll-reveal" data-lightbox>
+        <img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?w=900&q=85" alt="Look 10" loading="lazy">
+        <div class="lookbook-item-info">
+          <span class="lookbook-look-num">Look 10</span>
+          <span class="lookbook-pieces">Eclipse Gown, The Architect Coat</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BEHIND THE SCENES -->
+  <section class="lookbook-bts">
+    <div class="lookbook-bts-header">
+      <span class="section-tag">Behind the Lens</span>
+      <h2 class="lookbook-bts-title scroll-reveal">Making of SS26</h2>
+    </div>
+    <div class="lookbook-bts-grid">
+      <div class="lookbook-bts-item scroll-reveal">
+        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&q=80" alt="BTS 1" loading="lazy">
+        <span class="bts-caption">Belgrade, Day 1 &mdash; Scout</span>
+      </div>
+      <div class="lookbook-bts-item scroll-reveal">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80" alt="BTS 2" loading="lazy">
+        <span class="bts-caption">Styling the Monolith Trench</span>
+      </div>
+      <div class="lookbook-bts-item scroll-reveal">
+        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&q=80" alt="BTS 3" loading="lazy">
+        <span class="bts-caption">Last light, Marseille</span>
+      </div>
+      <div class="lookbook-bts-item scroll-reveal">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80" alt="BTS 4" loading="lazy">
+        <span class="bts-caption">Crew wrap &mdash; Tbilisi</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOOKBOOK LIGHTBOX -->
+  <div id="lookbookLightbox" class="lightbox">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close">&times;</button>
+      <button class="lightbox-nav lightbox-prev">&larr;</button>
+      <img id="lookbookLightboxImg" src="" alt="Lookbook Lightbox">
+      <button class="lightbox-nav lightbox-next">&rarr;</button>
+      <div class="lightbox-counter"><span id="lbLookNum">01</span> / <span id="lbLookTotal">10</span></div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="lookbook-cta">
+    <div class="lookbook-cta-inner">
+      <h2 class="lookbook-cta-title scroll-reveal">Shop the looks.</h2>
+      <a href="collections.html" class="btn-primary page-link scroll-reveal"><span>View Collection</span><span class="btn-arrow">&rarr;</span></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col"><span class="footer-logo">MAISON NOIR</span><p class="footer-tagline">Silence is luxury.</p></div>
+      <div class="footer-col">
+        <span class="footer-label">Explore</span>
+        <a href="collections.html" class="page-link">Collections</a>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="journal.html" class="page-link">Journal</a>
+        <a href="about.html" class="page-link">About</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">Connect</span>
+        <a href="contact.html" class="page-link">Contact</a>
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">Details</span>
+        <p>13 Rue de Braque<br>Paris, 75003</p>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Maison Noir. All rights reserved.</span></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
